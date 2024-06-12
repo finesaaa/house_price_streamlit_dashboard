@@ -13,7 +13,7 @@ st.title('🏠 Prediksi Harga Properti')
 properti = pd.read_csv('data_input/properti_jual.csv')
 
 # Read model yang telah dibuat
-model = pd.read_pickle('harga_properti_model_38.pkl')
+model = pd.read_pickle('harga_properti_model_11.pkl')
 # model = load('harga_properti_model.joblib')
 
 # Fungsi untuk melakukan prediksi
