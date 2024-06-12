@@ -1,7 +1,7 @@
 import pandas as pd
 import streamlit as st
 
-from joblib import load
+# from joblib import load
 
 import time
 
@@ -13,8 +13,8 @@ st.title('🏠 Prediksi Harga Properti')
 properti = pd.read_csv('data_input/properti_jual.csv')
 
 # Read model yang telah dibuat
-# model = pd.read_pickle('harga_properti_model.pkl')
-model = load('harga_properti_model.joblib')
+model = pd.read_pickle('harga_properti_model_38.pkl')
+# model = load('harga_properti_model.joblib')
 
 # Fungsi untuk melakukan prediksi
 def prediksi_harga_properti(data_input):
