@@ -1,10 +1,5 @@
 import pandas as pd
 import streamlit as st
-import pickle
-import sklearn
-
-# from joblib import load
-
 import time
 
 st.set_page_config(page_title='Prediksi Harga Properti', page_icon='🏠')
@@ -15,7 +10,7 @@ st.title('🏠 Prediksi Harga Properti')
 properti = pd.read_csv('data_input/properti_jual.csv')
 
 # Read model yang telah dibuat
-filename = 'finalized_model.pickle'
+filename = 'finalized_model.pkl'
 model = pd.read_pickle(filename)
 # with open('harga_properti_model_11.pkl', 'rb') as file:
 #     model = pickle.load(file)
