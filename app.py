@@ -14,9 +14,10 @@ st.title('🏠 Prediksi Harga Properti')
 properti = pd.read_csv('data_input/properti_jual.csv')
 
 # Read model yang telah dibuat
-# Buka file menggunakan 'rb' (read binary)
-with open('harga_properti_model_11.pkl', 'rb') as file:
-    model = pickle.load(file)
+filename = 'finalized_model.sav'
+model = pickle.load(open(filename, 'rb'))
+# with open('harga_properti_model_11.pkl', 'rb') as file:
+#     model = pickle.load(file)
 # model = load('harga_properti_model.joblib')
 
 # Fungsi untuk melakukan prediksi
@@ -102,5 +103,3 @@ with st.container():
             time.sleep(2)
             
             st.success(f'Hasil Prediksi Harga Rumah: Rp {harga:,.0f}')
-
-
