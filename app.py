@@ -15,8 +15,8 @@ st.title('🏠 Prediksi Harga Properti')
 properti = pd.read_csv('data_input/properti_jual.csv')
 
 # Read model yang telah dibuat
-filename = 'finalized_model.sav'
-model = pickle.load(open(filename, 'rb'))
+filename = 'finalized_model.pickle'
+model = pd.read_pickle(filename)
 # with open('harga_properti_model_11.pkl', 'rb') as file:
 #     model = pickle.load(file)
 # model = load('harga_properti_model.joblib')
